@@ -4,27 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- ===== SEO BÁSICO EDITÁVEL ===== -->
-<title>Nome da Empresa | Especialistas em Serviços</title>
-<meta name="description" content="Descrição breve da empresa e principais serviços. Atendimento rápido via WhatsApp.">
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Nome da Empresa | Cidade - Estado">
-<meta property="og:description" content="Descrição resumida para redes sociais.">
-<meta property="og:image" content="img/imagem-principal.jpg">
-<meta property="og:locale" content="pt_BR">
+<title>Nome da Agência | Landing Pages Premium</title>
 
 <style>
 
-/* =====================================================
-   RESET
-===================================================== */
+/* RESET */
 *{margin:0;padding:0;box-sizing:border-box;}
 
 body{
-    font-family:Arial, sans-serif;
+    font-family:'Inter',sans-serif;
     background:#f4f6f8;
-    text-align:center;
+    color:#1a1a1a;
 }
 
 .container{
@@ -33,186 +26,112 @@ body{
     padding:0 20px;
 }
 
-/* =====================================================
-   HERO / HEADER
-===================================================== */
+/* HERO */
 header{
-    background:url('img/imagem-principal.jpg') center/cover no-repeat;
+    background:linear-gradient(135deg,#0a1f44,#162b5c);
     color:white;
-    padding:100px 20px;
-    position:relative;
+    padding:120px 20px;
 }
-header::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:rgba(10,31,68,0.75);
-}
-header .container{position:relative;z-index:1;}
-header h1{margin-bottom:15px;}
-header p{margin-bottom:25px;}
 
-/* =====================================================
-   BOTÃO PRINCIPAL (WHATSAPP)
-===================================================== */
-.btn-whatsapp{
+.hero-content{
+    max-width:650px;
+}
+
+header h1{
+    font-size:42px;
+    line-height:1.2;
+    margin-bottom:20px;
+}
+
+header p{
+    font-size:18px;
+    margin-bottom:30px;
+    opacity:0.9;
+}
+
+.btn{
     background:#25D366;
     color:white;
-    padding:15px 25px;
+    padding:15px 28px;
     text-decoration:none;
-    border-radius:8px;
-    font-weight:bold;
+    border-radius:6px;
+    font-weight:600;
     display:inline-block;
-    position:relative;
-    overflow:hidden;
-    animation:pulse 2.5s infinite;
-}
-@keyframes pulse{
-    0%{transform:scale(1);}
-    50%{transform:scale(1.04);}
-    100%{transform:scale(1);}
-}
-
-/* =====================================================
-   SEÇÕES
-===================================================== */
-section{padding:70px 20px;}
-
-/* =====================================================
-   SERVIÇOS
-===================================================== */
-.servicos{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-    margin-top:30px;
-}
-.card{
-    background:white;
-    padding:25px;
-    border-radius:10px;
-    box-shadow:0 4px 10px rgba(0,0,0,0.1);
-    display:flex;
-    flex-direction:column;
-    justify-content:space-between;
-    cursor:pointer;
     transition:0.3s;
 }
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+/* BENEFÍCIOS */
+.beneficios{
+    padding:80px 20px;
+    background:white;
+}
+
+.beneficios-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+    margin-top:40px;
+}
+
+.beneficio{
+    padding:20px;
+}
+
+.beneficio h3{
+    margin-bottom:10px;
+}
+
+/* SERVIÇOS */
+.servicos{
+    padding:80px 20px;
+    background:#f0f2f5;
+}
+
+.servicos-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+    margin-top:40px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 6px 20px rgba(0,0,0,0.05);
+    transition:0.3s;
+}
+
 .card:hover{
     transform:translateY(-5px);
 }
 
-/* =====================================================
-   AVALIAÇÕES
-===================================================== */
-.avaliacoes{
-    background:linear-gradient(rgba(10,31,68,0.8),rgba(10,31,68,0.8)),
-    url('img/fundo-avaliacoes.jpg');
-    background-size:cover;
-    background-position:center;
-    color:white;
-}
-
-.estrelas{
-    font-size:28px;
-    color:#f4b400;
-}
-.estrelas span{
-    opacity:0;
-    display:inline-block;
-    transform:scale(0.5);
-    animation:aparecerEstrela 0.6s forwards;
-}
-.estrelas span:nth-child(1){animation-delay:0.2s;}
-.estrelas span:nth-child(2){animation-delay:0.5s;}
-.estrelas span:nth-child(3){animation-delay:0.8s;}
-.estrelas span:nth-child(4){animation-delay:1.1s;}
-.estrelas span:nth-child(5){animation-delay:1.4s;}
-@keyframes aparecerEstrela{
-    to{opacity:1;transform:scale(1);}
-}
-
-/* BOTÃO AVALIAÇÕES */
-.btn-avaliacoes{
-    display:inline-block;
-    margin-top:25px;
-    background:white;
-    color:#0a1f44;
-    padding:14px 30px;
-    text-decoration:none;
-    border-radius:8px;
-    font-weight:bold;
-    transition:0.3s;
-}
-.btn-avaliacoes:hover{
-    background:#f4b400;
-    color:white;
-}
-
-/* =====================================================
-   FOOTER
-===================================================== */
-footer{
+/* CTA FINAL */
+.cta{
     background:#0a1f44;
     color:white;
-    padding:30px 20px;
+    padding:90px 20px;
+    text-align:center;
 }
 
-/* =====================================================
-   WHATSAPP FLUTUANTE
-===================================================== */
-.whatsapp-float{
-    position:fixed;
-    width:60px;
-    height:60px;
-    bottom:20px;
-    right:20px;
-    background:#25D366;
+.cta h2{
+    margin-bottom:20px;
+}
+
+/* FOOTER */
+footer{
+    background:#111827;
+    color:#ccc;
+    padding:40px 20px;
+    font-size:14px;
+}
+
+footer strong{
     color:white;
-    border-radius:50%;
-    text-align:center;
-    font-size:30px;
-    line-height:60px;
-    text-decoration:none;
-    box-shadow:0 4px 10px rgba(0,0,0,0.3);
-}
-
-/* =====================================================
-   MODAL
-===================================================== */
-.modal{
-    display:none;
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,0.6);
-    justify-content:center;
-    align-items:center;
-    z-index:999;
-}
-.modal-conteudo{
-    background:white;
-    padding:30px;
-    border-radius:12px;
-    max-width:500px;
-    width:90%;
-    text-align:center;
-    position:relative;
-}
-.fechar{
-    position:absolute;
-    top:15px;
-    right:20px;
-    font-size:24px;
-    cursor:pointer;
-}
-
-/* =====================================================
-   RESPONSIVO
-===================================================== */
-@media(max-width:768px){
-    header{padding:60px 15px;}
-    header h1{font-size:22px;}
-    section{padding:40px 15px;}
 }
 
 </style>
@@ -220,128 +139,89 @@ footer{
 
 <body>
 
-<!-- =====================================================
-     HERO
-===================================================== -->
+<!-- HERO -->
 <header>
 <div class="container">
-<h1>Nome da Empresa</h1>
-<p>Frase forte descrevendo seu principal serviço.</p>
-<a class="btn-whatsapp" href="https://wa.me/5500000000000" target="_blank">
-FALAR NO WHATSAPP
-</a>
+<div class="hero-content">
+<h1>Sua empresa merece uma presença digital à altura da sua qualidade.</h1>
+<p>Criamos landing pages premium para negócios locais que desejam mais autoridade, mais confiança e mais clientes.</p>
+<a href="#" class="btn">Falar com Especialista</a>
+</div>
 </div>
 </header>
 
-<!-- =====================================================
-     SERVIÇOS
-===================================================== -->
-<section>
+<!-- BENEFÍCIOS -->
+<section class="beneficios">
 <div class="container">
-<h2>Nossos Serviços</h2>
+<h2>Por que investir em uma landing profissional?</h2>
 
-<div class="servicos">
+<div class="beneficios-grid">
 
-<div class="card" onclick="abrirModal('servico1')">
-<h3>Serviço 1</h3>
-<p>Descrição resumida do serviço.</p>
+<div class="beneficio">
+<h3>Mais Credibilidade</h3>
+<p>Transmita profissionalismo e confiança desde o primeiro contato.</p>
 </div>
 
-<div class="card" onclick="abrirModal('servico2')">
-<h3>Serviço 2</h3>
-<p>Descrição resumida do serviço.</p>
+<div class="beneficio">
+<h3>Mais Autoridade</h3>
+<p>Destaque sua empresa no mercado local com presença digital forte.</p>
 </div>
 
-<div class="card" onclick="abrirModal('servico3')">
-<h3>Serviço 3</h3>
-<p>Descrição resumida do serviço.</p>
+<div class="beneficio">
+<h3>Mais Contatos</h3>
+<p>Estrutura pensada para converter visitantes em clientes.</p>
 </div>
 
-<div class="card" onclick="abrirModal('servico4')">
-<h3>Serviço 4</h3>
-<p>Descrição resumida do serviço.</p>
+<div class="beneficio">
+<h3>Design Premium</h3>
+<p>Visual moderno, elegante e estratégico.</p>
 </div>
 
 </div>
 </div>
 </section>
 
-<!-- =====================================================
-     AVALIAÇÕES
-===================================================== -->
-<section class="avaliacoes">
+<!-- SERVIÇOS -->
+<section class="servicos">
 <div class="container">
-<h2>Avaliação dos Clientes</h2>
-<p class="estrelas">
-<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-</p>
-<p>5.0 de 5 estrelas no Google</p>
-<a href="#" target="_blank" class="btn-avaliacoes">
-⭐ Ver Avaliações
-</a>
+<h2>Soluções para Negócios Locais</h2>
+
+<div class="servicos-grid">
+
+<div class="card">
+<h3>Landing Institucional</h3>
+<p>Ideal para apresentar sua empresa de forma profissional.</p>
+</div>
+
+<div class="card">
+<h3>Landing Focada em Conversão</h3>
+<p>Estrutura otimizada para gerar contatos via WhatsApp.</p>
+</div>
+
+<div class="card">
+<h3>Otimização Visual</h3>
+<p>Reformulação de páginas existentes para padrão premium.</p>
+</div>
+
+</div>
 </div>
 </section>
 
-<!-- =====================================================
-     RODAPÉ
-===================================================== -->
+<!-- CTA FINAL -->
+<section class="cta">
+<div class="container">
+<h2>Vamos posicionar sua empresa no nível que ela merece.</h2>
+<a href="#" class="btn">Solicitar Orçamento</a>
+</div>
+</section>
+
 <footer>
 <div class="container">
-<p><strong>Nome da Empresa</strong></p>
-<p>Cidade - Estado</p>
-<p>WhatsApp: (00) 00000-0000</p>
-<p>E-mail: email@empresa.com</p>
-<p>🔒 Site Seguro</p>
+<p><strong>Nome da Agência</strong></p>
+<p>Especialistas em Landing Pages para Negócios Locais</p>
 <p>© 2026 Todos os direitos reservados</p>
 </div>
 </footer>
-
-<a href="https://wa.me/5500000000000" target="_blank" class="whatsapp-float">💬</a>
-
-<!-- =====================================================
-     MODAL
-===================================================== -->
-<div id="modal" class="modal">
-<div class="modal-conteudo">
-<span class="fechar" onclick="fecharModal()">&times;</span>
-<h3 id="modal-titulo"></h3>
-<p id="modal-texto"></p>
-<br>
-<a href="https://wa.me/5500000000000" target="_blank" class="btn-whatsapp">
-Falar no WhatsApp
-</a>
-</div>
-</div>
-
-<script>
-function abrirModal(tipo){
-const titulo=document.getElementById("modal-titulo");
-const texto=document.getElementById("modal-texto");
-
-if(tipo==="servico1"){
-titulo.innerText="Serviço 1";
-texto.innerText="Descrição detalhada do serviço 1.";
-}
-if(tipo==="servico2"){
-titulo.innerText="Serviço 2";
-texto.innerText="Descrição detalhada do serviço 2.";
-}
-if(tipo==="servico3"){
-titulo.innerText="Serviço 3";
-texto.innerText="Descrição detalhada do serviço 3.";
-}
-if(tipo==="servico4"){
-titulo.innerText="Serviço 4";
-texto.innerText="Descrição detalhada do serviço 4.";
-}
-
-document.getElementById("modal").style.display="flex";
-}
-
-function fecharModal(){
-document.getElementById("modal").style.display="none";
-}
-</script>
 
 </body>
 </html>
